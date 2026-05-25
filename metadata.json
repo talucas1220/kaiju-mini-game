@@ -1,0 +1,6 @@
+{
+  "name": "Pixel Monster Rampage",
+  "description": "Retro arcade pixel-art game where you play as a giant monster. Grow bigger by eating humans, crushing vehicles, destroying buildings, and unleashing devastating attacks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

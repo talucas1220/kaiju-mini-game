@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Pixel Monster Rampage</string>
+    <string name="title_activity_main">Pixel Monster Rampage</string>
+    <string name="package_name">com.rampage.pixelmonster</string>
+    <string name="custom_url_scheme">com.rampage.pixelmonster</string>
+</resources>

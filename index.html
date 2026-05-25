@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Pixel Monster Rampage</title>
+    <!-- PWA Configurations -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0f172a" />
+    
+    <!-- iOS App Capable Customizations -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Monster Rampage" />
+    <link rel="apple-touch-icon" href="/icon-512.png" />
+    <style>
+      /* Prevent scrolling bounciness and set touch feedback standards on phone screens */
+      html, body, #root {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #020617;
+        overflow: hidden;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register the passive Service Worker to unlock the Chrome "Install App" button
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((reg) => console.log('Service Worker registered successfully:', reg.scope))
+            .catch((err) => console.error('Service Worker registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
+
